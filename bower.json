@@ -1,0 +1,29 @@
+{
+  "name": "openmesh-puzzle",
+  "version": "0.0.1",
+  "authors": [
+    "Mike P <webmech@gmail.com>"
+  ],
+  "description": "Michael Price's attempt at being an Open-Mesh Developer",
+  "main": "./assets/js/app.js",
+  "keywords": [
+    "puzzle"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies":{
+    "canjs":"bitovi/canjs",
+    "jquery":"jquery#1.9",
+    "require":"jrburke/requirejs",
+    "require-css":"guybedford/require-css",
+    "array":"array-util#0.0.4",
+    "moment":"momentjs#2.4.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

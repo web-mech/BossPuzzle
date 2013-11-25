@@ -1,0 +1,133 @@
+@import 'elements.less';
+
+@header-footer-height:40px;
+@header-footer-bg:#424242;
+@ui-color:#eb6156;
+@ui-color-alt:#fcfcfc;
+@button-bg: #666666;
+@button-bg-alt:#999999;
+body{
+	background-color: #333;
+	font-size: 1.2em;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:@ui-color;
+}
+header,footer{
+	height:@header-footer-height;
+	color:@ui-color;
+	background-color: @header-footer-bg;
+	padding:10px;
+	border-radius: 2px;
+}
+footer{
+	color:#fcfcfc;
+}
+#game{
+	position: relative;
+	padding:15px;
+}
+#controls{
+	position: fixed;
+	display: inline-block;
+	background-color: @header-footer-bg;
+	border-radius:5px;
+	padding:5px;
+	section{
+		margin: 10px;
+	}
+	button{
+		width:80px;
+		display: block;
+		margin-top:10px;
+		background-color: @button-bg;
+		border:1px solid @ui-color;
+		color:@ui-color;
+		padding:10px;
+		border-radius: 4px;
+		cursor: pointer;
+		&.enabled{
+			&:hover{
+				color:@ui-color-alt;
+			}
+			&:active{
+				border: 1px inset @ui-color;
+				background-color: @button-bg-alt;
+			}
+		}
+		&.disabled{
+			cursor:default;
+			border:1px solid #ccc;
+			color:#ccc;
+		}
+	}
+	span{
+		display: block;
+		text-align: center;
+	}
+}
+.alt{
+	color:@ui-color-alt;
+}
+#board{
+	position: relative;
+	margin-left: 50%;
+	left:-250px;
+	background-color: @header-footer-bg;
+	border-radius:5px;
+	display: inline-block;
+	width:500px;
+	height:400px;
+	padding:10px;
+	table{
+		width: 100%;
+		height: 100%;
+	    border-spacing:0;
+	    border-collapse:collapse;
+		tr{
+			td{
+				margin: 0px;
+				width:23%;
+				height: 23%;
+				padding:5px;
+				span{
+					display: block;
+					background-color: @ui-color;
+					color:@ui-color-alt;
+					width: 100%;
+					height: 100%;
+					border-radius:8px;
+					text-align: center;
+					font-size: 2em;
+					cursor:pointer;
+					&.empty{
+						display: none;
+					}
+				}
+			}
+
+		}
+	}
+}
+#history{
+	position:relative;
+	left: -250px;
+	padding:10px;
+	border-radius:5px;
+	background-color: @header-footer-bg;
+	display:inline-block;
+	margin-left: 50%;
+	margin-bottom:5px;
+	width:500px;
+	height:30px;
+	text-align: center;
+	span{
+		padding-left:20px;
+		padding-right:20px;
+		color:#fff;
+		.h-title{
+			color:@ui-color;
+			padding:0px;
+			margin-right: 10px;
+		}
+	}
+}

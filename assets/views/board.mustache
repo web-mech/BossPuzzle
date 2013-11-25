@@ -1,0 +1,11 @@
+<table>
+	<tbody>
+		{{#each board.rows}}
+			<tr>
+				{{#renderRow board.list @index}}
+					{{{cell}}}
+				{{/renderRow}}
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

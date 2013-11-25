@@ -13,3 +13,6 @@ results
 
 npm-debug.log
 node_modules
+assets/js/lib/*
+public
+test
