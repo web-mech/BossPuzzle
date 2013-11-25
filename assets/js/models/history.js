@@ -12,7 +12,7 @@ define(['can'],function(){
 				if(localStorage.bossPuzzleMoves && localStorage.bossPuzzleTime){
 					this.moves(localStorage.bossPuzzleMoves);
 					this.time(localStorage.bossPuzzleTime);
-					this.table = localStorage.bossPuzzleTable;
+					this.table = JSON.parse(localStorage.bossPuzzleTable);
 
 				}else{
 					this.enabled(false);
@@ -37,10 +37,11 @@ define(['can'],function(){
 				return;
 			localStorage.bossPuzzleMoves = moves;
 			localStorage.bossPuzzleTime = time;
-			localStorage.bossPuzzleTable = table;
+			localStorage.bossPuzzleTable = JSON.stringify(table);
 			this.moves(localStorage.bossPuzzleMoves);
 			this.time(localStorage.bossPuzzleTime);
 			this.enabled(true);
+			this.table = JSON.stringify(table);
 		}
 	});
 

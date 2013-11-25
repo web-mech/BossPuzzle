@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-		.fade {
-		  -webkit-transition: all 250ms linear;
-		  -moz-transition: all 250ms linear;
-		  -o-transition: all 250ms linear;
-		  transition: all 250ms linear;
-		  opacity: 0;
-		}
-		.fade.in {
-		  opacity: 1;
-		}
-		</style>		
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body class="fade">
 		<header>
@@ -23,19 +12,13 @@
 			<aside id="history"></aside>
 			<section id="board"></section>
 		</section>
-		<footer>github</footer>
+
+		<footer>
+			<iframe src="http://ghbtns.com/github-btn.html?user=web-mech&repo=BossPuzzle&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+		</footer>
 		<script type="text/mustache" id="tpl-history">
-			<table>
-				<tbody>
-					{{#each board.rows}}
-						<tr>
-							{{#renderRow board.list @index}}
-								{{{cell}}}
-							{{/renderRow}}
-						</tr>
-					{{/each}}
-				</tbody>
-			</table>
+			<span><span class="h-title">Time:</span>{{Hist.time}}</span>
+			<span><span class="h-title">Moves:</span>{{Hist.moves}}</span>
 		</script>
 		<script type="text/mustache"  id="tpl-board">
 			<table>
@@ -65,6 +48,6 @@
 				<span class="alt">{{Board.moves}}</span>
 			</section>
 		</script>
-		<script src="js/lib/require/require.js" data-main="js/app" aync></script>
+		<script src="js/lib/require/require.js" data-main="js/app"></script>
 	</body>
 </html>

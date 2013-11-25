@@ -7,7 +7,7 @@ define(['can','array'],function(){
 			this.rows = new can.List([]);
 			this.moves = can.compute(0);
 			this.rowCount = rows;
-			this.complete = can.compute(this.checkComplete.bind(this));
+			this.complete = can.compute(false);
 			this.reset();
 		},
 		initList:function(){
@@ -69,6 +69,7 @@ define(['can','array'],function(){
 						this.list.splice(candidateIndex,1,slot);
 						this.rows.replace(this.rows.slice(0));
 						this.moves(this.moves()+1);
+						this.checkComplete();
 						return;
 					}
 				}
@@ -87,15 +88,18 @@ define(['can','array'],function(){
 				var p = list.attr(i-1).attr('val');
 				var c = list.attr(i).attr('val');
 
-				if(p>c)
+				if(p>c){
 					return false;
+				}
+					
 			}
-			return true;
+			return this.complete(true);
 		},
 		reset:function(){
 			this.active(false);
 			this.list.replace([]);
 			this.rows.replace([]);
+			this.complete(false);
 			this.moves(0);
 			this.initList();
 			this.initRows();

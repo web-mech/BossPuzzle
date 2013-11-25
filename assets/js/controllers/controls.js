@@ -6,8 +6,8 @@ define(['jquery','models/time','models/board','models/history','can'],function($
 			Board.complete.bind('change',this.onComplete.bind(this));
 		},
 		onComplete:function(ev,complete){
-			if(complete === true && Time.active()){
-				Hist.setHistory(Board.moves(),Time.elapsed(),JSON.stringify(Board.list.attr()));
+			if(complete === true){
+				Hist.setHistory(Board.moves(),Time.elapsed(),Board.list.attr());
 				Time.stop();
 			}
 		},
@@ -23,7 +23,7 @@ define(['jquery','models/time','models/board','models/history','can'],function($
 		},
 		'.history click':function(el,ev){
 			if(Hist.enabled()){
-				Board.history(JSON.parse(Hist.table));
+				Board.history(Hist.table);
 			}
 		},
 		render:function(){
