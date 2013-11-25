@@ -1,8 +1,8 @@
 requirejs.config({
-	baseUrl:'./assets/js/lib/',
+	baseUrl:'./js/lib/',
 	paths:{
 		'jquery':'jquery/jquery.min',
-		'can':'canjs/dist/amd/can',
+		'can':'canjs/dist/can.jquery',
 		'moment':'moment/moment',
 		'css':'require-css/css',
 		'models':'../models',

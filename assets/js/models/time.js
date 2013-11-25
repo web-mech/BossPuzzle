@@ -1,4 +1,4 @@
-define(['can','moment'],function(can,moment){
+define(['moment','can'],function(moment){
 	var _time = can.Construct.extend({
 		init:function(){
 			this.active = can.compute(false);

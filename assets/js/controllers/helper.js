@@ -1,4 +1,4 @@
-define(['can'],function(can){
+define(['can'],function(){
 	can.Mustache.registerHelper('renderRow', function(list,index,options){
 		var row = [];
 		var out = [];
@@ -18,7 +18,7 @@ define(['can'],function(can){
 		}
 
 		for(var i =0;i<row.length;i++){
-			out.push( options.fn({cell: can.view.render('assets/views/cell.mustache',{index:row.attr(i)})}) );
+			out.push( options.fn({cell: can.view.render('tpl-cell',{index:row.attr(i)})}) );
 		}
 		return out.join("");
 	});

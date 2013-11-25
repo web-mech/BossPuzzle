@@ -1,0 +1,122 @@
+
+body {
+  background-color: #333;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #eb6156;
+}
+header,
+footer {
+  height: 40px;
+  color: #eb6156;
+  background-color: #424242;
+  padding: 10px;
+  border-radius: 2px;
+}
+footer {
+  color: #fcfcfc;
+}
+#game {
+  position: relative;
+  padding: 15px;
+}
+#controls {
+  position: fixed;
+  display: inline-block;
+  background-color: #424242;
+  border-radius: 5px;
+  padding: 5px;
+}
+#controls section {
+  margin: 10px;
+}
+#controls button {
+  width: 80px;
+  display: block;
+  margin-top: 10px;
+  background-color: #666666;
+  border: 1px solid #eb6156;
+  color: #eb6156;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#controls button.enabled:hover {
+  color: #fcfcfc;
+}
+#controls button.enabled:active {
+  border: 1px inset #eb6156;
+  background-color: #999999;
+}
+#controls button.disabled {
+  cursor: default;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+#controls span {
+  display: block;
+  text-align: center;
+}
+.alt {
+  color: #fcfcfc;
+}
+#board {
+  position: relative;
+  margin-left: 50%;
+  left: -250px;
+  background-color: #424242;
+  border-radius: 5px;
+  display: inline-block;
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+}
+#board table {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+#board table tr td {
+  margin: 0px;
+  width: 23%;
+  height: 23%;
+  padding: 5px;
+}
+#board table tr td span {
+  display: block;
+  background-color: #eb6156;
+  color: #fcfcfc;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+}
+#board table tr td span.empty {
+  display: none;
+}
+#history {
+  position: relative;
+  left: -250px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #424242;
+  display: inline-block;
+  margin-left: 50%;
+  margin-bottom: 5px;
+  width: 500px;
+  height: 30px;
+  text-align: center;
+}
+#history span {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+}
+#history span .h-title {
+  color: #eb6156;
+  padding: 0px;
+  margin-right: 10px;
+}

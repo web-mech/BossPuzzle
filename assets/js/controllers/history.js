@@ -1,6 +1,6 @@
-define(['can','models/history'],function(can,Hist){
+define(['models/history','can'],function(Hist){
 	return can.Control({
-		view:'assets/views/history.mustache',
+		view:'tpl-history',
 		init:function(){
 			this.render();
 		},

@@ -1,4 +1,4 @@
-define(['can','array'],function(can){
+define(['can','array'],function(){
 	var _board = can.Construct.extend({
 		init:function(count,rows){
 			this.count = count+1;

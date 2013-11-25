@@ -4,7 +4,7 @@
   "authors": [
     "Mike P <webmech@gmail.com>"
   ],
-  "description": "Michael Price's attempt at being an Open-Mesh Developer",
+  "description": "Michael Price 15-Puzzle Game",
   "main": "./assets/js/app.js",
   "keywords": [
     "puzzle"

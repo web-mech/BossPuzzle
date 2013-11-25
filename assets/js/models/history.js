@@ -1,4 +1,4 @@
-define(['can'],function(can){
+define(['can'],function(){
 	var _history = can.Construct.extend({
 		init:function(){
 			this.enabled = can.compute(true);

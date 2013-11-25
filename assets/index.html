@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.fade {
+		  -webkit-transition: all 250ms linear;
+		  -moz-transition: all 250ms linear;
+		  -o-transition: all 250ms linear;
+		  transition: all 250ms linear;
+		  opacity: 0;
+		}
+		.fade.in {
+		  opacity: 1;
+		}
+		</style>		
+	</head>
+	<body class="fade">
+		<header>
+			Sort Like a Boss
+		</header>
+		<section id="game">
+			<aside id="controls"></aside>
+			<aside id="history"></aside>
+			<section id="board"></section>
+		</section>
+		<footer>github</footer>
+		<script type="text/mustache" id="tpl-history">
+			<table>
+				<tbody>
+					{{#each board.rows}}
+						<tr>
+							{{#renderRow board.list @index}}
+								{{{cell}}}
+							{{/renderRow}}
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</script>
+		<script type="text/mustache"  id="tpl-board">
+			<table>
+				<tbody>
+					{{#each board.rows}}
+						<tr>
+							{{#renderRow board.list @index}}
+								{{{cell}}}
+							{{/renderRow}}
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</script>
+		<script type="text/mustache" id="tpl-cell">
+			<td><span class="board-item {{boardEmptySlot index}}" {{(el) -> el.data('item',index)}}>{{index.val}}</span></td>
+		</script>
+		<script type="text/mustache" id="tpl-controls">
+			<section>
+				<span>Time</span>
+				<span class="alt">{{Time.elapsed}}</span>
+			</section>
+			<button class="enabled {{gameActiveClass Time.active}}">{{gameActive Time.active}}</button>
+			<button class="history {{historyEnabled Hist.enabled}}">History</button>
+			<section>
+				<span>Moves</span>
+				<span class="alt">{{Board.moves}}</span>
+			</section>
+		</script>
+		<script src="js/lib/require/require.js" data-main="js/app" aync></script>
+	</body>
+</html>

@@ -1,6 +1,6 @@
-define(['jquery','can','models/time','models/board','models/history'],function($,can,Time,Board,Hist){
+define(['jquery','models/time','models/board','models/history','can'],function($,Time,Board,Hist){
 	return can.Control({
-		view:'assets/views/controls.mustache',
+		view:'tpl-controls',
 		init:function(){
 			this.render();
 			Board.complete.bind('change',this.onComplete.bind(this));

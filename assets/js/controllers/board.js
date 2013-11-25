@@ -1,6 +1,6 @@
-define(['can','models/time','models/board','controllers/helper'],function(can,Time,Board){
+define(['models/time','models/board','controllers/helper','can'],function(Time,Board){
 	return can.Control({
-		view:'assets/views/board.mustache',
+		view:'tpl-board',
 		init:function(){
 			this.render();			
 		},
